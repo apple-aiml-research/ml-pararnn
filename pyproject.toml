@@ -18,9 +18,6 @@ dependencies = [
     "typing-inspect"
 ]
 
-[tool.setuptools]
-packages = ["pararnn"]
-
 [tool.setuptools.packages.find]
 where = ["."]
 
