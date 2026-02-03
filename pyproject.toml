@@ -21,5 +21,8 @@ dependencies = [
 [tool.setuptools]
 packages = ["pararnn"]
 
+[tool.setuptools.packages.find]
+where = ["."]
+
 [tool.setuptools.dynamic]
 version = {attr = "pararnn.__version__"}
