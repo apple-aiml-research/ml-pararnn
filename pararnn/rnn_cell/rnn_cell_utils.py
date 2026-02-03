@@ -6,7 +6,7 @@
 import typing as typ
 import typing_inspect
 import dataclasses
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 
 import torch
 
@@ -35,7 +35,7 @@ class Config(TraitCheckMixin, typ.Generic[TraitT]):
     device: torch.device = torch.device('cpu')
     dtype: torch.dtype = torch.float32
     mode: str = 'parallel'
-    newton_config: NewtonConfig = NewtonConfig()
+    newton_config: NewtonConfig = field(default_factory=NewtonConfig)
 
 
 @dataclass
